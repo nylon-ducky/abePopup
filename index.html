@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- My CSS-->
+    <link rel="stylesheet" href="abePopup.css">
+
+    <!-- My JavaScript -->
+    <script defer src="abePopup.js"></script>
+    <title>Abe Legal Popup</title>
+</head>
+
+<body>
+
+    <button onclick="popItUp()" id="popButton">Pop It</button>
+
+    <!-- Page Content -->
+    <div id="content">
+        <h1>web content</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, officia tempore omnis quasi eligendi
+            pariatur
+            itaque accusamus veritatis dolore alias est harum tempora inventore provident ut dicta suscipit ducimus,
+            dolorum
+            nulla aliquid quis. Cupiditate corporis sint accusantium qui pariatur animi reiciendis dolores ab. Sequi
+            corrupti nostrum maxime natus, aut architecto impedit qui autem amet tenetur voluptatum voluptatibus nobis
+            est
+            accusamus quod fuga quia id! Sint aliquid, aliquam laudantium atque consequuntur nobis dolore possimus
+            suscipit
+            illo consectetur, quasi ratione laboriosam ipsa!
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium facere ullam nisi velit laborum
+            sint
+            repellat autem cum ea expedita aspernatur rerum consequatur consectetur laboriosam illum, sit nemo
+            reiciendis
+            voluptates dolor vel dignissimos esse ex. Corrupti, omnis labore hic in voluptatibus odit eaque quam dolorum
+            voluptates accusamus, ducimus suscipit, perspiciatis magni repellendus id expedita praesentium. Tempora,
+            accusamus. Nesciunt, doloremque nostrum? Quidem quae earum, recusandae blanditiis quod vel repellat, vitae
+            nisi
+            cum minus eaque molestias voluptatibus minima inventore animi nostrum illo iusto tempore sunt vero error
+            voluptatem perferendis at dolore. At vel repellat tempore ab deserunt? Assumenda, dolor! Quae quam dolor
+            commodi, distinctio incidunt illo. Optio nostrum alias consequuntur libero tempore aliquam, minima
+            voluptates
+            tempora, ipsam ipsa odit. Inventore repellendus laborum obcaecati iusto temporibus nesciunt in iure, harum
+            aspernatur repudiandae error placeat dolorem! Saepe dignissimos laborum velit nemo explicabo beatae deserunt
+            at
+            neque sed! Explicabo ab aliquid sit voluptatibus sequi consequuntur, quo aut quod ducimus dolorem repellat,
+            perferendis autem consequatur quos sed ratione saepe maiores atque. Unde maiores neque id? Nulla delectus
+            quaerat ex eaque quod dolorum doloribus animi consequatur.
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni neque voluptas impedit omnis natus fuga ipsum
+            ducimus error mollitia sed quibusdam, hic et, perspiciatis aspernatur incidunt at voluptatum vero debitis
+            cumque
+            totam ullam! Quia aliquid alias quaerat voluptatum numquam dicta odit incidunt saepe reiciendis a molestias
+            corporis dolor, et inventore provident amet maxime non tenetur expedita facilis tempore est officia illo.
+            Impedit earum eaque laudantium?
+        </p>
+    </div>
+
+    <!-- My Modal -->
+    <div id="popupBox">
+
+        <div class="buttons">
+            <button onclick="increaseFont()" id="increaseFont">Increase Font Size</button>
+            <button onclick="closeButton()" id="closeButton">X</button>
+        </div>
+
+        <h2>Book Your Consultation Today!</h2>
+
+        <form method="POST">
+            <!-- First Name -->
+            <label for="firstname">First Name:
+                <small>(Required)</small></label>
+            <br />
+            <input type="text" id="firstname" name="firstname">
+            <br />
+
+            <!-- Last Name -->
+            <label for="lastname">Last Name:
+                <small>(Required)</small></label>
+            <br />
+            <input type="text" id="lastname" name="lastname">
+            <br />
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <br />
+            <input type="tel" id="phone" name="phone">
+            <br />
+
+            <!-- E-mail -->
+            <label for="email">Your E-Mail:</label>
+            <br />
+            <input type="email" id="email" name="email">
+            <br />
+
+            <!-- Preferred Contact Method -->
+            <div id="contact-methods">
+                <label for="contact-methods">
+                    Your preferred contact method:<br />
+                    <small>(Required)</small> <br />
+
+                    <!-- E-mail -->
+                    <div class="options">
+                        <input type="radio" class="radio" id="via-email" name="contact-method" value="via-email"
+                            tabindex="0">
+                        <label for="via-email" class="radio">E-Mail</label>
+                    </div>
+
+                    <!-- Phone Call -->
+                    <div class="options">
+                        <input type="radio" class="radio" id="via-call" name="contact-method" value="via-call"
+                            tabindex="0">
+                        <label for="via-call" class="radio">Call</label>
+                    </div>
+
+                    <!-- Text Message -->
+                    <div class="options">
+                        <input type="radio" class="radio" id="via-text" name="contact-method" value="via-text"
+                            tabindex="0">
+                        <label for="via-text" class="radio">Text</label>
+                    </div>
+                </label>
+            </div>
+
+            <input type="submit" class="submit" onsubmit="closeButton()">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
