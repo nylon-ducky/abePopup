@@ -5,8 +5,8 @@ function popItUp() {
 
 function increaseFont() {  
     box.style.fontSize = "large";
-    box.style.width = window.screen.width + "px";
-    box.style.height = window.screen.height + "px";
+    box.style.width = "350px";
+    box.style.height = "775px";
     box.style.top = "0";
     box.style.right = "0";
     box.style.margin = "5px";
